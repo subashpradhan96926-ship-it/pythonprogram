@@ -1,0 +1,4 @@
+no=153
+p=0
+temp=no
+while temp!=0:

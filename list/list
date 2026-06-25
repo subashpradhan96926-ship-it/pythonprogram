@@ -1,0 +1,1020 @@
+List:
+
+list is predefiend   datastrcutre.
+
+insertion  order is preserved.
+
+duplicate element allow.
+similar and dismaliar elements
+list is mutable.
+
+
+syntax:
+How to create list
+
+L=[]
+print(type(L))
+o/p:
+<class list>
+
+
+L=[]
+L.append(10)
+L.append(20)
+L.append(30)
+print(L)
+o/p:
+[10,20,30]
+
+
+if we known data then list initlization in single line.
+
+L=[10,20,30]
+print(L)
+
+o/p:
+[10,20,30]
+
+L=[10,20.45,"hi"]
+print(L)
+o/p:
+[10,20.45,'hi']
+
+
+L=list()
+print(type(L))
+o/p:
+<class 'list'>
+
+
+L=list(range(5))  #(0,1,2,3,4,5,) 
+print(type(L))
+print(L)
+o/p:
+<class 'list'>
+[0,1,2,3,4]
+
+
+L=list("hello")
+print(type(L))
+print(L)
+o/p:
+list
+['h','e','l','l','o']
+
+
+s="ram is a good boy"
+L=s.split()
+print(L)
+o/p:
+['ram', 'is', 'a', 'good', 'boy']
+
+
+
+
+indexing and slicing
+
+_______________________
+L=[10,20,30,40,50]
+print(L[2],L[-3])
+print(L[1:4:1])
+print(L[-4:-1:1])
+
+o/p:
+30 30
+20 30 40
+20 30 40
+                                  index   L[index]
+                                   0    1    2   3    4      
+                                    10  20   30   40  50
+                                    -5   -4   -3   -2  -1
+
+ L[start:stop:step]
+
+
+display all element in list:
+_____________________________
+way 1:using sequence concept
+
+L=[10,20,30,40,50]
+for i in L:
+  print(i)
+o/p:
+here i is element
+10
+20
+30
+40
+50
+
+
+
+
+way 2:using index concept
+range(start,stop,step)
+range(start,stop)
+range(stop)
+
+here start=0   stop-1     step=1
+
+L=[10,20,30,40,50]
+for i in range(0,len(L),1):
+  print(L[i])
+
+o/p:
+here i is index
+10
+20
+30
+40
+50
+
+
+Display all element in backward by using index
+___________________________
+L=[10,20,30,40,50]
+
+for i in range(len(L)-1,-1,-1):
+  print(L[i])
+
+o/p;
+50
+40
+30
+20
+10
+
+
+Display all element in backward by using sequnence
+L=[10,20,30,40,50]
+L1=L[::-1]
+for i in L1:
+  print(i)
+
+o/p;
+50
+40
+30
+20
+10
+
+inbulit function
+_________
+L=[5,9,23,2,0]
+print(len(L))
+print(max(L))
+print(min(L))
+print(sum(L))
+print(any(L)) #  one nonzero true
+print(all(L)) # all nonzero true
+
+o/p:
+5
+23
+0
+39
+True
+False
+
+
+
+
+list operator
+
+L=[5,9,7,2,10]
+L[2]=8
+del L[1]
+print(L)
+
+
+o/p:
+C:\Users\HP\Desktop>py 1.py
+[5, 8, 2, 10]
+
+
+
+
+L=[5,9,7,2,10]
+L[1:4:]=[15]
+print(L)
+
+o/p:
+[5, 15, 10]
+
+
+
+
+insert
+_
+L=[5,9,7,8,10]
+L[2:2:]=[10,11,13]
+print(L)
+
+o/p:
+C:\Users\HP\Desktop>py 1.py
+[5, 9, 10, 11, 13, 7, 8, 10]
+
+ 
+update
+__
+L=[5,9,7,8,10]
+L[2:3:]=[10,11,13]
+print(L)
+o/p:
+[5, 9, 10, 11, 13, 8, 10]
+
+
+delete
+___
+L=[5,9,7,8,10]
+del L[2:4]
+print(L)
+
+o/p:
+[5, 9, 10]
+
+
+
+
+L=[5,9,7,8,10]
+print(7 in L)
+print(6 in L)
+print(6 not in L)
+
+
+o/p:
+C:\Users\HP\Desktop>py 1.py
+True
+False
+True
+
+
+
+L1=[5,9,7]
+L2=[5,9,7]
+print(L1==L2)
+print(L1 is L2)
+
+
+o/p:
+True   (==value)
+False  (is addrees)
+
+
+L1=[5,9,7]
+L2=[5,8,7]
+print(L1==L2)
+print(L1 >L2)
+print(L1>=L2)
+
+
+o/p:
+False
+True
+True
+
+
+L=[2,3,5]
+print(L*3)
+
+o/p:
+[2,3,5,2,3,5,2,3,5]
+
+
+L=[2,3,5]
+L1=[8,9]
+print(L+L1)
+o/p:
+[2, 3, 5, 8, 9]
+list predefied fuction
+____________________
+append(): insert element last
+L=[5,8,12,3,9]
+L.append(40)
+print(L)
+
+o/p:
+[5, 8, 12, 3, 9, 40]
+
+
+
+
+L=[5,8,12,3,9]
+L.insert(0,40)
+L.insert(6,45)
+L.insert(3,35)
+L.insert(20,55)
+print(L)
+print(L[8])
+L.insert(-10,34)
+print(L[0])
+print(L)
+
+o/p:
+C:\Users\HP\Desktop>py 1.py
+[40, 5, 8, 35, 12, 3, 9, 45, 55]
+55
+34
+[34, 40, 5, 8, 35, 12, 3, 9, 45, 55]
+
+extend:
+_______
+L=[5,8,7]
+L1=[12,34]
+L.extend(L1)
+print(L)
+print(L1)
+
+
+o/p:
+[5, 8, 7, 12, 34]
+[12, 34]
+
+
+L=[5,8,7]
+L.extend("hi")
+print(L)
+
+o/p:
+[5, 8, 7, 'h', 'i']
+
+
+
+
+remove(element):  remove the element
+
+L=[5,8,7,8,12]
+L.remove(8)
+print(L)
+o/p:
+[5, 7, 8, 12]
+
+
+
+
+L=[5,8,7,8,12]
+L.remove(23)
+print(L)
+o/p:
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\1.py", line 2, in <module>
+    L.remove(23)
+ValueError: list.remove(x): x not in list
+
+
+L=[5,8,7,8,12]
+print(L.pop())
+print(L.pop())
+print(L.pop())
+print(L.pop())
+print(L.pop())
+#print(L.pop()) indexerror
+print(L)
+
+o/p:
+12
+8
+7
+8
+5
+[]
+
+
+L=[5,8,7,8,12]
+L.clear()
+print(L)
+
+o/p:
+[]
+
+L=[5,8,7,8,12]
+del L
+
+
+L=[5,8,7,8,12]
+L.reverse()
+print(L)
+
+o/p:
+[12, 8, 7, 8, 5]
+
+
+
+L=[5,9,7,4,12]
+L.sort()
+print(L)
+o/p:
+[4, 5, 7, 9, 12]
+
+L=[5,9,7,4,12]
+L.sort(reverse=True)
+print(L)
+o/p:
+[12, 9, 7, 5, 4]
+
+
+
+
+
+L=["muna","kuna","rabi","dadu"]
+L.sort()
+print(L)
+o/p:
+['dadu', 'kuna', 'muna', 'rabi']
+
+
+L=[5,8,7,8,12,8]
+print(L.count(8))
+
+o/p:
+3
+
+
+L=[5,8,7,12,8]
+print(L.index(8))
+
+o/P
+1
+
+L=[5,8,7,6,12,8]
+print(L.index(8,3))
+o/p:
+5
+
+
+L=[5,8,7]
+L[1]=25
+print(L)
+
+o/p:
+[5,25,7]
+
+
+assgin list refernce
+__________________
+L=[5,8,7]
+L1=L
+L[0]=10
+print(L)
+print(L1)
+
+o/p:
+[10, 8, 7]
+[10, 8, 7]
+
+
+
+L=[5,8,7] 
+L1=L.copy()
+L[0]=10
+print(L)
+print(L1)
+
+
+o/P
+[10, 8, 7]
+[5, 8, 7]
+
+
+
+
+
+
+
+
+keyboad input list data
+____________________
+L=[]
+print("enter how many element stote in list")
+s=int(input())
+for i in range(0,s,1):
+  print("enter element ",i+1)
+  L.append(int(input()))
+print("elements are ",L)
+
+or
+L=[]
+print("enter element ")
+L=eval(input())
+print("elements are ",L)
+or
+L=[0,0,0,0,0]
+
+for i in range(0,len(L),1):
+  print("enter data ",i+1)
+  L[i]=int(input())
+print("elements are ",L)
+
+
+
+List comphersenion:
+
+L=[expression  for element in sequence  condition]
+
+
+without using list comphersenion
+L=[5,8,12,3,9]
+L1=[]
+for i in L:
+  L1.append(i)
+print(L1)
+
+
+L=[5,8,12,3,9]
+L1=[i for i in L]
+print(L1)
+
+
+L=[5,8,12,3,9]
+L1=L[]
+for i in L:
+  if i%2==0:
+    L1.append(i)
+print(L1)
+
+L=[5,8,12,3,9]
+L1=L[i for i in L if i%2==0]
+print(L1)
+
+
+L=[5,8,12,3,9]
+L1=L[i+3 for i in L if i%2!=0]
+print(L1)
+
+
+
+
+
+
+
+
+
+
+List comphersenion:
+L=[5,8,12,3,9]
+L1=[i for i in L]
+print(L1)
+
+o/p:
+[5,8,12,3,9]
+
+
+without using list comphersenion
+
+L=[5,8,12,3,9]
+L1=[]
+for i in L:
+  L1.append(i**2)
+print(L1)
+o/p:
+[25, 64, 144, 9, 81]
+
+
+using list comphersenion
+____________________________
+L=[5,8,12,3,9]
+L1=[i**2 for i in L]
+print(L1)
+o/p:
+[25, 64, 144, 9, 81]
+
+without using list comphersion
+__________
+L=[5,8,12,3,9]
+L1=[]
+for i in L:
+  if i>7:
+    L1.append(i**2)
+print(L1)
+
+o/p:[64, 144, 81]
+
+using list  comphersion
+________________
+L=[5,8,12,3,9]
+L1=[i**2 for i in L if i>7]
+print(L1)
+
+o/p:[64, 144, 81]
+
+
+
+
+without using  list comphersion
+_________
+s="welcome"
+L=[]
+for i in s:
+  if i in "aeiou":
+    L.append(i)
+print(L)
+o/p:
+['e', 'o', 'e']
+
+using  list comphersion
+_________
+s="welcome"
+L=[i for i in s if i in "aeiou"]
+print(L)
+o/p:
+['e', 'o', 'e']
+
+
+L=[i*3 for i in range(1,11,1) if i%2==0]
+print(L)
+o/p:
+[6, 12, 18, 24, 30]
+
+
+Find the sum of all elements in a list
+L=[5,8,12,4,7]
+s=0
+for i in L:
+  s=s+i
+print("sum of element=",s)
+
+or
+L=[5,8,12,4,7]
+s=0
+for i in range(0,len(L),1):
+  s=s+L[i]
+print("sum of element=",s)
+
+or
+L=[5,8,12,4,7]
+print(sum(L))
+
+
+Find the maximum element in a list
+L=[5,8,12,4,7]
+print(max(L))
+
+or
+L=[5,8,12,4,7]
+max=L[0]
+for i in L:
+  if max<i:
+    max=i
+print("max element=",max)
+
+
+
+
+
+Find the minimum element in a list
+L=[5,8,12,4,7]
+print(min(L))
+
+or
+L=[5,8,12,4,7]
+min=L[0]
+for i in L:
+  if min>i:
+    min=i
+print("min element=",min)
+
+
+
+Find the second largest element in a list
+L=[5,8,12,4,7,12]
+L.sort()
+L.reverse()
+for i in range(0,len(L)-1,1):
+  if L[i]!=L[i+1]:
+    break
+print("second largest=",L[i+1])
+
+
+
+
+
+Find the second smallest element in a list
+L=[5,8,12,4,7,12]
+L.sort()
+for i in range(0,len(L)-1,1):
+  if L[i]!=L[i+1]:
+    break
+print("second smallest",L[i+1])
+
+
+#each element occur how many times  sorting
+
+s=int(input("enter the size of the list \n"))
+L1=[]
+for i in range(0,s):
+  print("enter element ",i+1)
+  L1.append(int(input()))
+print("elements are ",L1)
+L1.sort()
+i=0
+while i<len(L1):
+  c=1
+  j=i+1
+  while j<len(L1):
+    if L1[i]==L1[j]:
+      c=c+1
+    else:
+      break
+    j=j+1
+  print(L1[i],"element occur ",c ,"times")
+  i=j
+
+or
+s = int(input("Enter the size of the list: "))
+L1 = []
+
+# Input list elements
+for i in range(s):
+    val = int(input(f"Enter element {i+1}: "))
+    L1.append(val)
+
+print("Original elements:", L1)
+
+# Sort the list
+L1.sort()
+print("Sorted list:", L1)
+
+# Count occurrences using for loop
+i = 0
+n = len(L1)
+for i in range(n):
+    count = 1
+    while i + 1 < n and L1[i] == L1[i + 1]:
+        count += 1
+        i += 1
+    print(L1[i], "occurs", count, "times")
+
+
+
+
+s = int(input("Enter the size of the list: "))
+L1 = []
+# Input list elements
+for i in range(s):
+    val = int(input(f"Enter element {i+1}: "))
+    L1.append(val)
+
+print("Original list:", L1)
+
+# Sort the list
+L1.sort()
+print("Sorted list:", L1)
+
+# Track which elements are already counted
+counted = []
+for i in range(len(L1)):
+    if L1[i] not in counted:
+        count = 0
+        for j in range(len(L1)):
+            if L1[i] == L1[j]:
+                count += 1
+        print(L1[i], "occurs", count, "times")
+        counted.append(L1[i])
+
+
+
+
+Count the number of even numbers in a list
+
+Count the number of odd numbers in a list
+
+Count how many times a given element appears in a list
+
+Check if a specific element exists in the list
+
+Remove all duplicates from the list
+
+Reverse the list without using reverse()
+
+Sort the list without using sort() or sorted()
+
+Find the second largest element in a list
+
+Find the second smallest element in a list
+
+Remove all even numbers from the list
+
+Remove all odd numbers from the list
+
+Print all elements of the list that are divisible by 3
+
+Create a new list with squares of all numbers in the list
+
+Calculate the average (mean) of list elements
+
+Find the sum of only positive numbers in the list
+
+Find the sum of only negative numbers in the list
+
+Merge two lists into one (without using +)
+
+Check whether a list is a palindrome or not
+
+
+
+
+
+nested list
+___________
+L=[[1,7,3],[4,8,6]]
+print(L)
+print(L[0])
+print(L[1])
+print(L[0][1])
+print(L[1][2])
+
+o/p:
+_________
+[[1, 7, 3], [4, 8, 6]]
+[1, 7, 3]
+[4, 8, 6]
+7
+6
+
+
+display nested list matrix format
+____________________________________
+L=[[1,7,3],[4,8,6]]
+for i in L:
+  print(i)
+
+o/p:
+[1, 7, 3]
+[4, 8, 6]
+
+
+by sequence
+________________________________
+L=[[1,7,3],[4,8,6]]
+for i in L:
+  for j in i:
+    print(j,end="\t")
+  print()
+
+
+o/p:
+1       7       3
+4       8       6
+
+
+
+2nd way    by index
+____________
+
+
+L=[[1,7,3],[4,8,6]]
+for i in range(0,len(L),1):
+  print(L[i])
+o/p:
+[1, 7, 3]
+[4, 8, 6]
+
+another way   by index
+_______________
+
+L=[[1,7,3],[4,8,6]]
+for i in range(0,len(L),1):
+  for j in range(0,len(L[i]),1):
+    print(L[i][j],end="\t")
+  print()
+
+o/p:
+1       7       3
+4       8       6
+
+
+
+
+#take input from keyboard
+print("enter collection of list ")
+L=eval(input())
+print("list data ")
+print(L)
+C:\Users\DELL\Desktop\pythonprogram>py 1.py
+enter collection of list
+[[1,2,3],[4,5],[6]]
+list data
+[[1, 2, 3], [4, 5], [6]]
+
+
+L=[]
+print("enter how many list store ")
+r=int(input())
+for i in range(r):
+  print("enter list",i+1," data")
+  L.append(eval(input()))
+print("elements are ")
+print(L)
+C:\Users\DELL\Desktop\pythonprogram>py 1.py
+enter how many list store
+2
+enter list 1  data
+[10,20,30]
+enter list 2  data
+[40,50]
+elements are
+[[10, 20, 30], [40, 50]]
+
+
+
+
+L=[]
+print("enter list r and c ")
+r=int(input())
+c=int(input())
+print("enter ",r*c,"elements")
+for i in range(r):
+  x=[]
+  for j in range(c):
+    x.append(int(input()))
+  L.append(x)
+print("elements are ")
+print(L)
+C:\Users\DELL\Desktop\pythonprogram>py 1.py
+enter list r and c
+3
+4
+enter  12 elements
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+elements are
+[[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
+
+
+
+
+
+L=[]
+print("enter how many  list store ")
+r=int(input())
+for i in range(r):
+  x=[]
+  print("list ",i+1," store how many data")
+  c=int(input())
+  for j in range(c):
+    print("enter data ",j+1)
+    x.append(int(input()))
+  L.append(x)
+print("elements are ")
+print(L)
+:\Users\DELL\Desktop\pythonprogram>py 1.py
+enter how many  list store
+3
+list  1  store how many data
+4
+enter data  1
+10
+enter data  2
+20
+enter data  3
+30
+enter data  4
+40
+list  2  store how many data
+2
+enter data  1
+30
+enter data  2
+40
+list  3  store how many data
+1
+enter data  1
+70
+elements are
+[[10, 20, 30, 40], [30, 40], [70]]
+
+
+
+
+
+L=[[0,0,0],[0,0]]
+
+for i in range(len(L)):
+  for j in range(len(L[i])):
+    print("enter list",i+1,"data ",j+1)
+    L[i][j]=int(input())
+print("elements are ")
+print(L)
+C:\Users\DELL\Desktop\pythonprogram>py 1.py
+enter list 1 data  1
+10
+enter list 1 data  2
+20
+enter list 1 data  3
+30
+enter list 2 data  1
+40
+enter list 2 data  2
+50
+elements are
+[[10, 20, 30], [40, 50]]
